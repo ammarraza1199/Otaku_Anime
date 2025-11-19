@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 40% 6%;
+    --foreground: 35 25% 88%;
+
+    --card: 210 35% 8%;
+    --card-foreground: 35 25% 88%;
+
+    --popover: 210 35% 8%;
+    --popover-foreground: 35 25% 88%;
+
+    --primary: 32 45% 48%;
+    --primary-foreground: 35 25% 95%;
+
+    --secondary: 28 40% 36%;
+    --secondary-foreground: 35 25% 95%;
+
+    --muted: 210 30% 15%;
+    --muted-foreground: 35 15% 70%;
+
+    --accent: 32 45% 48%;
+    --accent-foreground: 35 25% 95%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 35 25% 95%;
+
+    --border: 210 30% 18%;
+    --input: 210 30% 18%;
+    --ring: 32 45% 48%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Otaku Library tokens */
+    --gold: 32 45% 48%;
+    --gold-light: 36 50% 62%;
+    --bronze: 28 40% 36%;
+    --navy-dark: 210 40% 6%;
+    --navy: 210 35% 8%;
+    --paper: 35 25% 88%;
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(32 45% 48%) 0%, hsl(36 50% 62%) 100%);
+    --gradient-shelf: linear-gradient(180deg, hsl(210 35% 8%) 0%, hsl(210 30% 12%) 100%);
+    
+    /* Shadows */
+    --shadow-gold: 0 10px 30px -10px hsl(32 45% 48% / 0.3);
+    --shadow-book: 0 8px 24px -6px hsl(210 40% 0% / 0.5);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Hide scrollbar for carousels */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
